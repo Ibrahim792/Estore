@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> edit Message </title>
+</head>
+<body>
+    <h2 align="center"> EDIT FORM </h2>
+<form align="center" action="" method="POST">
+    {% csrf_token %}
+    <label for="name"> First Name :</label>
+    <input type="text" name="fname" value= '{{data.fname}}' required>
+    <br><br>
+    <label for="name"> Last Name :</label>
+    <input type="text" name="lname" value= '{{data.lname}}' required>
+    <br><br>
+    <label for="number"> Mobile :</label>
+    <input name="number" value= '{{data.mobile}}'>
+    <br><br>
+    <label for="email"> Email :</label>
+    <input type="email" name="email" value= '{{data.email}}'>
+    <br><br>
+    {% comment %} <label for="password"> Password :</label>
+    <input type="password" name="password" placeholder="Enter Password" required>
+    <br><br> {% endcomment %}
+
+    <button> Edit </button>
+</form>
+</body>
+</html>

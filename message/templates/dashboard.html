@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DASHBOARD </title>
+</head>
+<body>
+    <h2 align="center"> DASHBOARD </h2>
+    
+<table align="center" border="1">
+    <tr>
+        <th> sr.no </th>
+        <th> firstname </th>
+        <th> lastname </th>
+        <th> mobile number </th>
+        <th> email </th>
+        <th> edit </th>
+        <th> delete </th>
+    </tr>
+{% for x in data %}
+<tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{x.fname}} </td>
+    <td>{{x.lname}} </td>
+    <td>{{x.mobile}} </td>
+    <td>{{x.email}} </td>
+    <td><a href= 'edit/{{x.id}}' >edit</a></td>
+    <td><a href= 'delete/{{x.id}}' >delete</a></td>
+</tr>
+{%endfor%}
+
+</table>
+
+</body>
+</html>
